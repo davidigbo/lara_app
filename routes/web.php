@@ -6,14 +6,14 @@ use App\Models\Listing;
 // All the listings
 Route::get('/', function () {
     return view('listings', [
-    'heading' => 'Latest Listings',
-    'listings' => Listing::all()
+        'heading' => 'Latest Listings',
+        'listings' => Listing::all()
     ]);
 });
 
 // Single listing
 Route::get('/listings/{id}', function ($id) {
     return view('listing', [
-    'listing' => Listing::find($id)
+        'listing' => Listing::find($id)
     ]);
 });
